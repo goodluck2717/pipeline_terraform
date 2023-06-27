@@ -10,7 +10,7 @@ pipeline {
         stage('checkout') {
             steps {
                  script{
-                          git "https://github.com/thapakrishna0111/terraform-pipeline.git"
+                          git branch: 'main', url: 'https://github.com/thapakrishna0111/pipeline_terraform.git'
                     }
                 }
             }
