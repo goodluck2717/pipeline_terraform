@@ -22,18 +22,18 @@ pipeline {
                 //cmd_exec('terraform plan')
             }
         }
-
-        stage('destroy') {
+        
+        stage('Apply') {
             steps {
-                 bat '''  terraform destroy -auto-approve  '''
+                 bat '''  terraform apply -auto-approve  '''
                 
             }
         }
 
         
-        stage('Apply') {
+        stage('destroy') {
             steps {
-                 bat '''  terraform apply -auto-approve  '''
+                 bat '''  terraform destroy -auto-approve  '''
                 
             }
         }
