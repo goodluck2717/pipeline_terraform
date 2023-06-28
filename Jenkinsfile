@@ -23,7 +23,14 @@ pipeline {
             }
         }
 
+        stage('destroy') {
+            steps {
+                 bat '''  terraform destroy -auto-approve  '''
+                
+            }
+        }
 
+        
         stage('Apply') {
             steps {
                  bat '''  terraform apply -auto-approve  '''
