@@ -18,16 +18,18 @@ pipeline {
         stage('Init') {
             steps {
                 bat '''  terraform init  '''
+                bat '''  terraform plan  '''
                 //cmd_exec('terraform plan')
             }
         }
 
 
-      //  stage('Apply') {
-          //  steps {
-                //cmd_exec('terraform apply -auto-approve') 
-         //   }
-       // }
+        stage('Apply') {
+            steps {
+                 bat '''  terraform apply -auto-approve  '''
+                
+            }
+        }
     }
 
   }
