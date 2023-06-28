@@ -17,17 +17,19 @@ pipeline {
 
         stage('Plan') {
             steps {
-                sh 'terraform init'
-                sh "terraform plan"
+                cmd_exec('terraform init')
+                cmd_exec('terraform plan')
             }
         }
 
 
         stage('Apply') {
             steps {
-                sh "terraform apply -auto-approve"
+                cmd_exec('terraform apply -auto-approve') 
             }
         }
     }
 
   }
+
+   
