@@ -15,9 +15,9 @@ pipeline {
                 }
             }
 
-        stage('Plan') {
+        stage('Init') {
             steps {
-                bat '''  ECHO Hello World  '''
+                bat '''  terraform init  '''
                 //cmd_exec('terraform plan')
             }
         }
