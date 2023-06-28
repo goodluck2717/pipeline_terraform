@@ -17,15 +17,15 @@ pipeline {
 
         stage('Plan') {
             steps {
-                cmd_exec('terraform init')
-                cmd_exec('terraform plan')
+                bat '''  ECHO Hello World  '''
+                //cmd_exec('terraform plan')
             }
         }
 
 
         stage('Apply') {
             steps {
-                cmd_exec('terraform apply -auto-approve') 
+                //cmd_exec('terraform apply -auto-approve') 
             }
         }
     }
