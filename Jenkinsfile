@@ -23,11 +23,11 @@ pipeline {
         }
 
 
-        stage('Apply') {
-            steps {
+      //  stage('Apply') {
+          //  steps {
                 //cmd_exec('terraform apply -auto-approve') 
-            }
-        }
+         //   }
+       // }
     }
 
   }
